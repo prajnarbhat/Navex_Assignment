@@ -1,0 +1,321 @@
+/* Root Variables */
+:root {
+  --main-font: Arial, Helvetica, sans-serif;
+  --heading-font: 'Roboto', sans-serif;
+  --primary-color: #004787;
+  --accent-color: #ef700c;
+  --hover-color: #008000;
+  --button-color: #3b6c6b;
+  --button-hover: #5fa4cb;
+  --report-bg: #0d580d;
+  --report-hover: #0b4a0b;
+  --text-dark: #424143;
+  --max-width: 1200px;
+}
+
+/* Reset and Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--text-dark);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  outline: none;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+img {
+  border: 0;
+  display: block;
+}
+
+ol, ul {
+  margin: 1em 0;
+  padding-left: 1.25em;
+}
+
+p {
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* Container Utilities */
+.contain {
+  margin: 0 auto;
+  width: var(--max-width);
+}
+
+.fill {
+  min-width: var(--max-width);
+  width: 100%;
+}
+
+.top {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.bottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+header .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.logo {
+  background: url('logo1.png') center top no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 50px;
+  margin: 20px 30px 20px 10px;
+  width: 150px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  display: inline-block;
+  font: normal 400 16px/1.75 var(--main-font);
+  padding: 0 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+/* Language Bar */
+#epLang {
+  color: black;
+}
+
+#epLang a {
+  display: none;
+}
+
+#epAttention {
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Main Layout */
+main {
+  display: block;
+  padding: 30px 0 50px;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-left {
+  width: 58%;
+  padding: 0 10px;
+}
+
+.col-right {
+  width: 38%;
+  padding: 0 10px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  line-height: 1.75;
+  margin: 0 0 10px;
+}
+
+h1 {
+  color: #b2bb35;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* Report Section */
+.online-icon {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.online-icon img {
+  background-color: var(--report-bg);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 15px;
+}
+
+.report-div {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 30px;
+}
+
+.report-link {
+  display: inline-block;
+  background-color: var(--report-bg);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.report-link:hover {
+  background-color: var(--report-hover);
+}
+
+/* Select + Button */
+select {
+  font: normal 400 14px var(--main-font);
+  margin: 2px 0 15px;
+  padding: 5px;
+  width: 100%;
+}
+
+button {
+  background-color: var(--button-color);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 18px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: var(--heading-font);
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  opacity: 0.9;
+}
+
+button:disabled,
+button:hover:disabled {
+  background-color: #ddd;
+  cursor: default;
+}
+
+/* Issues */
+#epIssues {
+  width: 100%;
+}
+
+#epIssues .issue {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  color: blue;
+}
+
+#epIssues .issue:hover {
+  color: var(--hover-color);
+}
+
+#epIssues .catdesc {
+  display: none;
+}
+
+#epIssues .catname {
+  font: normal 700 16px/20px var(--main-font);
+}
+
+#epIssues .details {
+  font-size: 12px;
+  margin-left: auto;
+}
+
+#epIssues .name {
+  font: normal 700 14px/20px var(--main-font);
+}
+
+#epIssues .desc {
+  flex-basis: 100%;
+  padding: 5px 0;
+}
+
+/* Footer */
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+  padding: 0 5px;
+}
+
+footer a:hover {
+  color: var(--accent-color);
+}
+
+footer table {
+  margin: 0 auto;
+  width: var(--max-width);
+}
+
+footer .line1,
+footer .line2 {
+  display: block;
+  padding: 10px 0;
+}
